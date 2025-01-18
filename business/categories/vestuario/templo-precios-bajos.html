@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directorio empresarial de Sabana de Torres, con un diseño moderno y dinámico.">
+    <title>Directorio Empresarial | Templo Precios Bajos</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../../assets/images/favicon.png" type="image/x-icon">
+
+    <!-- CSS Frameworks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../styles/bootstrap.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Templo de Precios Bajos</h1>
+        <b>Vestuario</b>
+    </header>
+
+<!-- Horizontal Panel -->
+<div class="horizontal-panel">
+    <button class="hamburger" onclick="toggleNavbar()">&#9776;</button>
+</div>
+
+
+<!-- Navigation Bar -->
+<nav class="navbar" id="sidebar">
+    <div class="navbar-brand">
+        <img src="../../../assets/images/logo.webp" class="menu-img" alt="CulturizateSDT">
+    </div>
+    <div class="nav-links">
+        <a class="nav-buttons btn" href="../../../nosotros.html">Nosotros</a>
+        <a class="nav-buttons btn" href="../../../contacto.html">Contacto</a>
+        <a class="nav-buttons btn" href="https://www.zonapagos.net/formulariosNV/?cod=BTK3a53qAPJK5dFzuUb9xixUjomHQKpegBmp%2FdV8Z5HOG8VEVWfFo7neO%2BDByXerA6ne7EK46jJicOaYelQ1Y6ihRENMxLdv1eVLf9n5HabdEtkf3HntRNdwk%2FTHyNhRA13nTh7b5KWj90noAzpsX%2BS7LfJ6oLugqIzQrGSq7lWmVKDDPF7dnPZquKjZGpFXVc5GHvZPXgCk64yN4e%2BuYg0ariGzvrz5zrrwXkb9wXib0rcSlWmEyUK83ARje2k6gEjXLWurFjJa4uc7k2wwuQ%3D%3D" target="_blank">Pagos en Linea</a>
+    </div>
+</nav>
+
+<!-- Overlay Background -->
+<div id="overlay" class="overlay" onclick="closeNavbar()"></div>
+
+    <!-- Cards Section -->
+        <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 fade-in">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="../../../assets/images/categories/vestuario/precios_bajos.webp" class="card-img-top" alt="ac" id="boutique ac">
+                        <div class="card-body">
+                            <h5 class="card-title">Ropa & Accesorios</h5>
+                            <p class="card-text">Prendas exclusivas y sofisticadas para ocasiones especiales y eventos formales.</p>
+                            <a class="btn btn-call" href="tel:+573166894213">📞 Llamar</a>
+                            <a href="https://wa.me/573166894213" class="btn btn-whatsapp">Whatsapp</a>
+
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-container">            
+            <!-- Google Maps -->
+            <iframe
+                id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999882397592!2d2.2922928156742673!3d48.85837360899086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdf2326556b%3A0x8e4e3f254cd6b0c7!2sTorre%20Eiffel!5e0!3m2!1ses!2sfr!4v1644095856379"
+                allowfullscreen>
+            </iframe>
+    
+            <!-- Botón de Cómo Llegar -->
+            <a class="btn-map" href="https://www.google.com/maps/dir/?api=1&destination=Torre+Eiffel,Paris,France" target="_blank">
+                📍 Cómo llegar
+            </a>
+        </div>
+    </section>
+    
+
+        <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p>&copy; 2025 Directorio Empresarial. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="floating-panel">
+    <a id="searchButton" class="btn-panel" title="Búsqueda">
+        <i class="fas fa-search"></i>
+    </a>
+    <a class="btn-center" href="../../../index.html" title="Inicio">
+        <i class="fas fa-home"></i>
+    </a>
+    <a class="btn-panel" href="../../categories.html" title="Categorías">
+        <i class="fas fa-list"></i>
+    </a>
+</div>
+
+<!-- Modal de Búsqueda -->
+<div id="searchModal" class="search-modal">
+    <div class="search-modal-content">
+        <button id="closeSearchModal" class="close-btn">&times;</button>
+        <h2>Buscar</h2>
+        <input type="text" id="searchInput" class="search-input" placeholder="Escribe aquí tu búsqueda...">
+        <button id="startSearchBtn" class="start-search-btn">Iniciar Búsqueda</button>
+        <div id="searchResults" class="search-results"></div> <!-- Sección para mostrar resultados -->
+    </div>
+</div>
+
+
+
+    <!-- JS Frameworks -->
+    <script src="../../../scripts/custom.js" defer></script>
+    <script src="../../../scripts/service-worker.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directorio comercial del centro popular comercial en la ciudad de Barrancabermeja, para mejorar la forma de buscar lo que necesites.">
+    <title>Centro Popular Comercial Barrancabermeja</title>    
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+
+    <!-- CSS Frameworks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+
+    <link rel="manifest" href="manifest.json"/>
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1 id= "inicio">Centro Popular Comercial</h1>
+        <h3>Barrancabermeja</h3>
+    </header>
+
+<!-- Carousel -->
+<div id="image-carousel" class="splide">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <img src="assets/images/logo.webp" alt="cpcbarranca">
+        <div class="slide-content">
+          <h3>CPC Barrancabermeja</h3>
+          <p>Visitanos</p>
+        </div>
+      </li>
+      <li class="splide__slide">
+        <img src="assets/images/principal/slide2.webp" alt="Imagen 2">
+        <div class="slide-content">
+          <h3>Estamos para ti</h3>
+          <p>Apoyamos y acompañamos a nuestra región.</p>
+        </div>
+      </li>
+        <li class="splide__slide">
+        <img src="assets/images/principal/slide3.webp" alt="Imagen 2">
+        <div class="slide-content">
+          <h3>Festeja la Cultura</h3>
+          <p>Nuestros jovenes merecen que trabajemos por mejorar su calidad de vida.</p>
+        </div>
+      </li>
+      <li class="splide__slide">
+        <img src="assets/images/principal/slide4.webp" alt="Imagen 2">
+        <div class="slide-content">
+          <h3>Felices Fiestas</h3>
+          <p>El CPC les desea un prospero y bendecido año.</p>
+        </div>
+      </li>
+      <li class="splide__slide">
+        <img src="assets/images/principal/slide5.webp" alt="Imagen 2">
+        <div class="slide-content">
+          <h3>Y que Sean Muchos Más</h3>
+          <p>Felicidades para todos nuestros compañeros.</p>
+        </div>
+      </li>
+      <li class="splide__slide">
+        <img src="assets/images/principal/slide6.webp" alt="Imagen 2">
+        <div class="slide-content">
+          <h3>Que Nada te Detenga</h3>
+          <p>Recarga energía solo a unos pasos.</p>
+        </div>
+      </li>
+      <!-- Agrega más elementos según sea necesario -->
+    </ul>
+  </div>
+</div>
+
+<!-- Horizontal Panel -->
+<div class="horizontal-panel">
+    <button class="hamburger" onclick="toggleNavbar()">&#9776;</button>
+</div>
+
+
+<!-- Navigation Bar -->
+<nav class="navbar" id="sidebar">
+    <div class="navbar-brand">
+        <img src="assets/images/logo.webp" class="menu-img" alt="CulturizateSDT">
+    </div>
+    <div class="nav-links">
+        <a class="nav-buttons btn" href="nosotros.html">Nosotros</a>
+        <a class="nav-buttons btn" href="contacto.html">Contacto</a>
+        <a class="nav-buttons btn" href="https://www.zonapagos.net/formulariosNV/?cod=BTK3a53qAPJK5dFzuUb9xixUjomHQKpegBmp%2FdV8Z5HOG8VEVWfFo7neO%2BDByXerA6ne7EK46jJicOaYelQ1Y6ihRENMxLdv1eVLf9n5HabdEtkf3HntRNdwk%2FTHyNhRA13nTh7b5KWj90noAzpsX%2BS7LfJ6oLugqIzQrGSq7lWmVKDDPF7dnPZquKjZGpFXVc5GHvZPXgCk64yN4e%2BuYg0ariGzvrz5zrrwXkb9wXib0rcSlWmEyUK83ARje2k6gEjXLWurFjJa4uc7k2wwuQ%3D%3D" target="_blank">Pagos en Linea</a>
+        <button class="nav-buttons btn" id="installBtn">Instalar App</button>
+
+    </div>
+</nav>
+
+<!-- Overlay Background -->
+<div id="overlay" class="overlay" onclick="closeNavbar()"></div>
+
+
+     <!-- Google Maps -->
+    <div class="map-container">            
+           
+            <h2 class= "text-recomended fade-in" >Llega desde cualquier lugar</h2>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.560528747145!2d-73.8687264!3d7.060810099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e42ec9edb06fd41%3A0x5b89585bb62572a8!2sCentro%20Popular%20Comercial%20CPC!5e0!3m2!1ses!2sco!4v1737184743664!5m2!1ses!2sco" 
+            width="100%" 
+            height="350" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+    
+            <!-- Botón de Cómo Llegar -->
+            <a class="btn-map" href="https://www.google.com/maps/dir//Centro+Popular+Comercial+CPC,+Cra.+8+%2350-20,+Barrancabermeja,+Santander/@7.0608101,-73.8687264,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e42ec9edb06fd41:0x5b89585bb62572a8!2m2!1d-73.8687264!2d7.0608101?hl=es&entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+                📍 Cómo llegar
+            </a>
+        </div>
+
+     <!-- Cards Section -->
+        <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <h2 class= "text-recomended fade-in" >Negocios Destacados</h2>
+                <div class="col-md-4 fade-in">
+                    <div class="card mb-4 shadow-sm">
+                        <img id="fogon" src="assets/images/principal/liliana_sisa.webp" class="card-img-top" alt="fogon">
+                        <div class="card-body">
+                            <h5 class="card-title">Credito Móviles</h5>
+                            <p class="card-text">CRÉDITO SMARTPHONE SIN ESTUDIO,ACEPTAMOS REPORTADOS, 14 años de Experiencia en santander.</p>
+                            <a href="business/categories/tecnologia/credito-moviles.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card mb-4 shadow-sm">
+                        <img id="golden" src="assets/images/principal/luisfer.webp" class="card-img-top" alt="Empresa 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Variedades Luisfer</h5>
+                            <p class="card-text">TIENDA FISICA Y VIRTUAL.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in">
+                    <div class="card mb-4 shadow-sm">
+                        <img id="pa beber" src="assets/images/principal/micell.webp" class="card-img-top" alt="Empresa 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Micell Store</h5>
+                            <p class="card-text">📲CELULARES A CRÉDITO📲
+                            ✅APLICA PARA REPORTADOS ✅
+                            ✨ACCESORIOS TECNOLÓGICOS ✨
+                            🤳SERVICIÓ TÉCNICO🔧📳.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class= "text-recomended facebook-video fade-in"><h6>Super Recomendado</h6><iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fcentropopularcomercialcpc%2Fvideos%2F1575980663314019%2F&show_text=true&width=267&t=0" width="267" height="695" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+
+      </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p>&copy; 2025 Directorio Empresarial. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="floating-panel">
+    <a id="searchButton" class="btn-panel" title="Búsqueda">
+        <i class="fas fa-search"></i>
+    </a>
+    <a class="btn-center" href="index.html" title="Inicio">
+        <i class="fas fa-home"></i>
+    </a>
+    <a class="btn-panel" href="../cpcbarranca/business/categories.html" title="Categorías">
+        <i class="fas fa-list"></i>
+    </a>
+</div>
+
+<!-- Modal de Búsqueda -->
+<div id="searchModal" class="search-modal">
+    <div class="search-modal-content">
+        <button id="closeSearchModal" class="close-btn">&times;</button>
+        <h2>Buscar</h2>
+        <input type="text" id="searchInput" class="search-input" placeholder="Escribe aquí tu búsqueda...">
+        <button id="startSearchBtn" class="start-search-btn">Iniciar Búsqueda</button>
+        <div id="searchResults" class="search-results"></div> <!-- Sección para mostrar resultados -->
+    </div>
+</div>
+
+
+
+    <!-- JS Frameworks -->
+    <script src="scripts/custom.js" defer></script>
+    <script src="scripts/service-worker.js" defer></script>
+    
+    
+
+</body>
+</html>
