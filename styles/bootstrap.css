@@ -504,30 +504,56 @@ section.bg-primary a:hover {
 }
 
 /* Carousel */
-/* Carousel Images Customization */
-.carousel-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; /* Padding general para todo el contenido interno del carrusel */
-}
+#carousel-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30vh;
+      background-color: #f5f5f5; /* Fondo suave */
+      overflow: hidden; /* Ocultar elementos fuera del área */
+    }
 
-.carousel-inner img {
-    width: 300px; /* Ancho fijo para las imágenes */
-    height: 300px; /* Alto fijo para las imágenes */
-    object-fit: cover; /* Recorte para mantener proporciones adecuadas */
-    margin: 10px; /* Separación entre imágenes */
-    border-radius: 20px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en el borde */
-    border: 2px solid #ddd; /* Borde gris claro */
-}
+    .carousel {
+      display: flex;
+      position: relative;
+      width: 80%; /* Ancho relativo al contenedor */
+      perspective: 1000px; /* Perspectiva para un efecto más dinámico */
+    }
 
-.carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px; /* Espaciado interno para cada elemento */
-}
+    .carousel-item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease, z-index 0.5s ease;
+      cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    /* Animación al pasar el cursor */
+    .carousel-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Posiciones de las tarjetas */
+    .carousel-item:nth-child(1) { transform: translate(-150%, -50%) scale(0.8); z-index: 1; }
+    .carousel-item:nth-child(2) { transform: translate(-50%, -50%) scale(0.8); z-index: 2; }
+    .carousel-item:nth-child(3) { transform: translate(50%, -50%) scale(1); z-index: 3; }
 
 /* Floating Panel */
 .floating-panel {
