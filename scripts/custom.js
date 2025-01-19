@@ -35,61 +35,6 @@ const smoothScroll = () => {
     });
 };
 
-// Carousel
-document.addEventListener("DOMContentLoaded", function () {
-      const carouselItems = document.querySelectorAll(".carousel-item");
-      let currentIndex = 0; // Índice de la tarjeta central
-      const totalItems = carouselItems.length;
-      const animationDelay = 5000; // Tiempo en milisegundos entre cada movimiento
-      
-      // Función para actualizar las posiciones de las tarjetas
-      function updateCarousel() {
-        carouselItems.forEach((item, index) => {
-          const offset = (index - currentIndex + totalItems) % totalItems; // Calcular desplazamiento circular
-          item.style.transition = "transform 0.8s ease, z-index 0.8s ease"; // Animación suave
-          if (offset === 0) {
-            // Tarjeta central
-            item.style.transform = "translate(-50%, -50%) scale(1)";
-            item.style.zIndex = "3";
-          } else if (offset === 1 || offset === totalItems - 1) {
-            // Laterales visibles
-            const direction = offset === 1 ? 50 : -150;
-            item.style.transform = `translate(${direction}%, -50%) scale(0.8)`;
-            item.style.zIndex = "2";
-          } else if (offset === 2 || offset === totalItems - 2) {
-            // Laterales ocultas
-            const direction = offset === 2 ? 150 : -250;
-            item.style.transform = `translate(${direction}%, -50%) scale(0.8)`;
-            item.style.zIndex = "1";
-          } else {
-            // Ocultar tarjetas fuera del rango
-            item.style.transform = "translate(0, -50%) scale(0)";
-            item.style.zIndex = "0";
-          }
-        });
-      }
-      
-      // Función para mover al siguiente elemento
-      function moveToNext() {
-        currentIndex = (currentIndex + 1) % totalItems; // Avanzar al siguiente índice circularmente
-        updateCarousel();
-      }
-      
-      // Inicializar el carrusel
-      updateCarousel();
-      const interval = setInterval(moveToNext, animationDelay);
-
-      // Zoom al interactuar con una tarjeta
-      carouselItems.forEach((item) => {
-        item.addEventListener("mouseenter", () => {
-          item.style.transform += " scale(1.05)";
-        });
-        item.addEventListener("mouseleave", () => {
-          item.style.transform = item.style.transform.replace(" scale(1.05)", "");
-        });
-      });
-    });
-
 // Toggle the visibility of the navbar
 function toggleNavbar() {
     const sidebar = document.getElementById('sidebar');
@@ -261,10 +206,60 @@ installBtn.addEventListener('click', async () => {
         deferredPrompt = null; // Reinicia la variable
     }
 });
+// Carousel
+document.addEventListener("DOMContentLoaded", function () {
+      const carouselItems = document.querySelectorAll(".carousel-item");
+      let currentIndex = 0; // Índice de la tarjeta central
+      const totalItems = carouselItems.length;
+      const animationDelay = 5000; // Tiempo en milisegundos entre cada movimiento
+      
+      // Función para actualizar las posiciones de las tarjetas
+      function updateCarousel() {
+        carouselItems.forEach((item, index) => {
+          const offset = (index - currentIndex + totalItems) % totalItems; // Calcular desplazamiento circular
+          item.style.transition = "transform 0.8s ease, z-index 0.8s ease"; // Animación suave
+          if (offset === 0) {
+            // Tarjeta central
+            item.style.transform = "translate(-50%, -50%) scale(1)";
+            item.style.zIndex = "3";
+          } else if (offset === 1 || offset === totalItems - 1) {
+            // Laterales visibles
+            const direction = offset === 1 ? 50 : -150;
+            item.style.transform = `translate(${direction}%, -50%) scale(0.8)`;
+            item.style.zIndex = "2";
+          } else if (offset === 2 || offset === totalItems - 2) {
+            // Laterales ocultas
+            const direction = offset === 2 ? 150 : -250;
+            item.style.transform = `translate(${direction}%, -50%) scale(0.8)`;
+            item.style.zIndex = "1";
+          } else {
+            // Ocultar tarjetas fuera del rango
+            item.style.transform = "translate(0, -50%) scale(0)";
+            item.style.zIndex = "0";
+          }
+        });
+      }
+      
+      // Función para mover al siguiente elemento
+      function moveToNext() {
+        currentIndex = (currentIndex + 1) % totalItems; // Avanzar al siguiente índice circularmente
+        updateCarousel();
+      }
+      
+      // Inicializar el carrusel
+      updateCarousel();
+      const interval = setInterval(moveToNext, animationDelay);
 
-
-
-
+      // Zoom al interactuar con una tarjeta
+      carouselItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          item.style.transform += " scale(1.05)";
+        });
+        item.addEventListener("mouseleave", () => {
+          item.style.transform = item.style.transform.replace(" scale(1.05)", "");
+        });
+      });
+    });
 
 function setupModals() {
     console.log("Modales listos");
