@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
       focus      : 'center',
       gap        : '1rem',
       autoplay   : true,
-      interval   : 3000,
+      interval   : 4000,
       breakpoints: {
         768: {
           perPage: 1,
